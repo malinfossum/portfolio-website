@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Malin Fossum — Full-Stack Engineer in training</title>
+    <meta
+      name="description"
+      content="Creating technology with empathy and impact. From social work to software—learning to build technology that helps people thrive."
+    />
+    <meta name="theme-color" content="#2E5EAA" />
+    <!-- Open Graph (optional — update url/image later) -->
+    <meta
+      property="og:title"
+      content="Malin Fossum — Full-Stack Engineer in training"
+    />
+    <meta
+      property="og:description"
+      content="Creating technology with empathy and impact."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://your-domain-or-github-pages-url" />
+    <meta
+      property="og:image"
+      content="https://your-domain-or-github-pages-url/og-image.png"
+    />
+
+    <style>
+      /* --------- Design tokens --------- */
+      :root {
+        --color-bg: #f5f7fb;
+        --color-text: #1f2937;
+        --color-muted: #6b7280;
+        --color-primary: #2e5eaa;
+        --color-primary-600: #244c89;
+        --color-accent: #5cc8ff;
+        --color-warm: #ffb86b;
+        --radius: 14px;
+        --shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+        --maxw: 1080px;
+      }
+
+      /* --------- Base --------- */
+      * {
+        box-sizing: border-box;
+      }
+      html:focus-within {
+        scroll-behavior: smooth;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html:focus-within {
+          scroll-behavior: auto;
+        }
+        * {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
+        }
+      }
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial,
+          sans-serif;
+        color: var(--color-text);
+        background: linear-gradient(180deg, #ffffff 0%, var(--color-bg) 100%);
+        line-height: 1.6;
+      }
+      img {
+        max-width: 100%;
+        display: block;
+      }
+      a {
+        color: var(--color-primary);
+        text-underline-offset: 3px;
+      }
+      a:hover {
+        color: var(--color-primary-600);
+      }
+      .wrap {
+        max-width: var(--maxw);
+        margin-inline: auto;
+        padding: 0 20px;
+      }
+
+      /* --------- Skip link --------- */
+      .skip {
+        position: absolute;
+        left: -999px;
+        top: auto;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+      }
+      .skip:focus {
+        position: fixed;
+        left: 16px;
+        top: 16px;
+        width: auto;
+        height: auto;
+        padding: 10px 14px;
+        background: #fff;
+        border: 2px solid var(--color-primary);
+        border-radius: 10px;
+        z-index: 9999;
+      }
+
+      /* --------- Header / Nav --------- */
+      header {
+        position: sticky;
+        top: 0;
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: saturate(150%) blur(8px);
+        border-bottom: 1px solid #e5eaf3;
+        z-index: 50;
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px 0;
+      }
+      .brand {
+        font-weight: 700;
+        letter-spacing: 0.2px;
+      }
+      .brand small {
+        display: block;
+        font-size: 0.8rem;
+        color: var(--color-muted);
+        font-weight: 500;
+      }
+      .nav a.btn {
+        margin-left: 10px;
+      }
+      .menu {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+      }
+      .menu a {
+        font-weight: 600;
+        color: var(--color-text);
+        text-decoration: none;
+      }
+      .menu a:hover {
+        text-decoration: underline;
+      }
+
+      /* --------- Buttons --------- */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 16px;
+        border-radius: 999px;
+        font-weight: 600;
+        text-decoration: none;
+        border: 2px solid var(--color-primary);
+        color: #fff;
+        background: var(--color-primary);
+        box-shadow: var(--shadow);
+        transform: translateZ(0);
+      }
+      .btn:hover {
+        background: var(--color-primary-600);
+        border-color: var(--color-primary-600);
+      }
+      .btn.secondary {
+        background: transparent;
+        color: var(--color-primary);
+      }
+      .btn.secondary:hover {
+        background: #e7f3ff;
+      }
+
+      /* --------- Hero --------- */
+      .hero {
+        padding: 64px 0 28px;
+      }
+      .hero .card {
+        background: #fff;
+        border: 1px solid #e5eaf3;
+        border-radius: var(--radius);
+        padding: 28px;
+        box-shadow: var(--shadow);
+      }
+      .kicker {
+        color: var(--color-primary);
+        font-weight: 700;
+        letter-spacing: 0.3px;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+      }
+      h1 {
+        font-size: clamp(28px, 4vw, 44px);
+        line-height: 1.2;
+        margin: 0.3em 0;
+      }
+      .sub {
+        font-size: 1.1rem;
+        color: var(--color-muted);
+        margin: 0.6em 0 1.2em;
+      }
+
+      /* --------- Sections --------- */
+      section {
+        padding: 48px 0;
+      }
+      .section-title {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 0 0 18px;
+        font-size: 1.5rem;
+      }
+      .muted {
+        color: var(--color-muted);
+      }
+
+      /* --------- About --------- */
+      .about {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 24px;
+        align-items: start;
+      }
+      .about .panel {
+        background: #fff;
+        border: 1px solid #e5eaf3;
+        border-radius: var(--radius);
+        padding: 22px;
+        box-shadow: var(--shadow);
+      }
+      .badge {
+        display: inline-block;
+        padding: 0.28rem 0.6rem;
+        border-radius: 999px;
+        background: #e7f3ff;
+        color: #14375f;
+        font-weight: 600;
+        font-size: 0.85rem;
+        margin: 0.2rem 0.35rem 0.2rem 0;
+      }
+
+      /* --------- Projects grid --------- */
+      .grid {
+        display: grid;
+        gap: 22px;
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .card {
+        background: #fff;
+        border: 1px solid #e5eaf3;
+        border-radius: var(--radius);
+        padding: 20px;
+        box-shadow: var(--shadow);
+        transition: transform 0.12s ease, box-shadow 0.12s ease;
+      }
+      .card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1);
+      }
+      .card h3 {
+        margin: 0 0 8px;
+      }
+      .tags {
+        margin-top: 8px;
+      }
+      .tag {
+        display: inline-block;
+        font-size: 0.8rem;
+        padding: 0.25rem 0.5rem;
+        background: #f0f4ff;
+        border-radius: 999px;
+        margin: 0 0.35rem 0.35rem 0;
+      }
+      .card .links {
+        display: flex;
+        gap: 10px;
+        margin-top: 12px;
+      }
+
+      /* --------- Journey --------- */
+      .timeline {
+        position: relative;
+        margin: 8px 0 0 0;
+        padding-left: 22px;
+      }
+      .timeline::before {
+        content: "";
+        position: absolute;
+        left: 8px;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: #e5eaf3;
+      }
+      .tl-item {
+        position: relative;
+        margin: 0 0 16px 0;
+      }
+      .tl-item::before {
+        content: "";
+        position: absolute;
+        left: -2px;
+        top: 0.35rem;
+        width: 10px;
+        height: 10px;
+        background: var(--color-accent);
+        border: 2px solid #fff;
+        border-radius: 50%;
+        box-shadow: 0 0 0 2px #e5eaf3;
+      }
+      .tl-title {
+        font-weight: 700;
+      }
+
+      /* --------- Contact --------- */
+      .contact .cta {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-top: 10px;
+      }
+
+      /* --------- Footer --------- */
+      footer {
+        padding: 36px 0 48px;
+        color: var(--color-muted);
+        text-align: center;
+      }
+
+      /* --------- Responsive --------- */
+      @media (max-width: 960px) {
+        .about {
+          grid-template-columns: 1fr;
+        }
+        .grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      @media (max-width: 640px) {
+        .menu {
+          display: none;
+        } /* simple for MVP */
+        .grid {
+          grid-template-columns: 1fr;
+        }
+        .hero {
+          padding: 40px 0 8px;
+        }
+      }
+      /* --------- Focus visible --------- */
+      :where(a, button, .btn):focus-visible {
+        outline: 3px solid var(--color-warm);
+        outline-offset: 3px;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <a href="#main" class="skip">Skip to content</a>
+
+    <header>
+      <div class="wrap nav" role="navigation" aria-label="Primary">
+        <div class="brand">
+          Malin Fossum
+          <small>Full-Stack Engineer (in training)</small>
+        </div>
+        <nav class="menu" aria-label="Sections">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#journey">Journey</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <a
+          class="btn secondary"
+          href="mailto:malinfossum.dev@proton.me"
+          aria-label="Email Malin"
+          >Contact</a
+        >
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- Hero -->
+      <section class="hero">
+        <div class="wrap">
+          <div class="card" role="region" aria-label="Hero">
+            <div class="kicker">
+              Creating technology with empathy and impact
+            </div>
+            <h1>
+              From social work to software — learning to build technology that
+              helps people thrive.
+            </h1>
+            <p class="sub">
+              I’m Malin, an aspiring Full-Stack Engineer from Norway. I care
+              about building human-centered, accessible solutions that make a
+              real difference.
+            </p>
+            <div class="contact cta">
+              <a class="btn" href="#projects">View Projects</a>
+              <a class="btn secondary" href="#contact">Contact Me</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about" class="wrap" aria-labelledby="about-title">
+        <h2 class="section-title" id="about-title">🧠 About</h2>
+        <div class="about">
+          <div class="panel">
+            <p>
+              I’m <strong>Malin Fossum</strong>, a social worker turned aspiring
+              <strong>Full-Stack Engineer</strong>. I’m currently learning
+              through Codecademy’s Full-Stack Engineer path and exploring
+              JavaScript and Python.
+            </p>
+            <p>
+              I believe empathy + technology can create meaningful, inclusive
+              experiences. Outside of code you’ll find me gaming, tinkering with
+              tech, and spending time with my wife, dog, and cat.
+            </p>
+          </div>
+          <div class="panel" id="skills" aria-labelledby="skills-title">
+            <h3 id="skills-title" style="margin-top: 0">
+              🧰 Skills (in progress)
+            </h3>
+            <div>
+              <span class="badge">HTML</span>
+              <span class="badge">CSS</span>
+              <span class="badge">JavaScript</span>
+              <span class="badge">React</span>
+              <span class="badge">Node.js</span>
+              <span class="badge">Express</span>
+              <span class="badge">SQL</span>
+              <span class="badge">Python</span>
+            </div>
+            <p class="muted" style="margin-top: 10px">
+              Currently learning — this list will grow!
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" class="wrap" aria-labelledby="projects-title">
+        <h2 class="section-title" id="projects-title">🌟 Featured Projects</h2>
+        <p class="muted" style="margin-top: -6px">
+          Highlights from my learning journey — each project reflects something
+          new I’ve explored.
+        </p>
+
+        <div class="grid" role="list">
+          <!-- Project 1 -->
+          <article class="card" role="listitem">
+            <h3>Portfolio Website</h3>
+            <p>
+              My personal site: clean, accessible, and minimal. Focused on
+              clarity and a welcoming tone.
+            </p>
+            <div class="tags">
+              <span class="tag">HTML</span><span class="tag">CSS</span
+              ><span class="tag">JavaScript</span>
+            </div>
+            <div class="links">
+              <a class="btn secondary" href="#" aria-disabled="true"
+                >Live Demo</a
+              >
+              <a
+                class="btn secondary"
+                href="https://github.com/malinfossum/portfolio-website"
+                >GitHub</a
+              >
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="card" role="listitem">
+            <h3>Full-Stack Capstone</h3>
+            <p>
+              A Codecademy project connecting frontend + backend to build
+              something purposeful.
+            </p>
+            <div class="tags">
+              <span class="tag">React</span><span class="tag">Node.js</span
+              ><span class="tag">SQL</span>
+            </div>
+            <div class="links">
+              <a class="btn secondary" href="#" aria-disabled="true"
+                >Live Demo</a
+              >
+              <a
+                class="btn secondary"
+                href="https://github.com/malinfossum/fullstack-capstone"
+                >GitHub</a
+              >
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="card" role="listitem">
+            <h3>Python Experiments</h3>
+            <p>
+              Small projects exploring Python logic, data structures, and fun
+              challenges.
+            </p>
+            <div class="tags">
+              <span class="tag">Python</span>
+            </div>
+            <div class="links">
+              <a class="btn secondary" href="#" aria-disabled="true"
+                >Live Demo</a
+              >
+              <a
+                class="btn secondary"
+                href="https://github.com/malinfossum/python-mini-projects"
+                >GitHub</a
+              >
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Journey -->
+      <section id="journey" class="wrap" aria-labelledby="journey-title">
+        <h2 class="section-title" id="journey-title">🌱 Journey</h2>
+        <div class="card">
+          <div class="timeline">
+            <div class="tl-item">
+              <div class="tl-title">
+                Started Full-Stack Engineer path (Codecademy)
+              </div>
+              <div class="muted">Foundations in HTML, CSS, JavaScript</div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-title">First React Components</div>
+              <div class="muted">State, props, and building reusable UI</div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-title">Backend & APIs</div>
+              <div class="muted">Node.js, Express, REST basics</div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-title">Exploring Python</div>
+              <div class="muted">Logic, data structures, problem-solving</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="wrap" aria-labelledby="contact-title">
+        <h2 class="section-title" id="contact-title">📫 Contact</h2>
+        <div class="card">
+          <p>Want to connect, collaborate, or share feedback?</p>
+          <div class="cta">
+            <a class="btn" href="mailto:malinfossum.dev@proton.me">Email Me</a>
+            <a class="btn secondary" href="https://github.com/malinfossum"
+              >GitHub Profile</a
+            >
+          </div>
+          <p class="muted" style="margin-top: 12px">
+            ✨ Tech with empathy. Code with purpose.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        © <span id="y"></span> Malin Fossum · Creating technology with empathy
+        and impact.
+      </div>
+    </footer>
+
+    <script>
+      // tiny enhancement: keep year current
+      document.getElementById("y").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
