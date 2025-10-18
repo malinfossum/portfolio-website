@@ -3,7 +3,7 @@
 Creating technology with empathy and impact.  
 From social work to software — learning to build technology that helps people thrive.
 
-![Portfolio Preview](screenshot.png)
+<img width="2542" height="1058" alt="Portfolio Preview" src="https://github.com/user-attachments/assets/24f33654-f871-4265-8194-c34f11831f9b"/>
 
 ## 🧠 About
 This is my personal portfolio website — a space to share my journey as a Full-Stack Engineer in training.  
