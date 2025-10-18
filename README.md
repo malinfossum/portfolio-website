@@ -1,44 +1,25 @@
-# 🌟 Malin Fossum – Portfolio Website
+# 🌙 Malin Fossum — Portfolio Website
 
-This is my **personal portfolio site**, built to reflect my journey from **social work to software** — focusing on empathy, accessibility, and purposeful design.
+Creating technology with empathy and impact.  
+From social work to software — learning to build technology that helps people thrive.
 
-You can view the live version here:  
-👉 [https://malinfossum.github.io/portfolio-website/](https://malinfossum.github.io/portfolio-website/)
-
----
+![Portfolio Preview](screenshot.png)
 
 ## 🧠 About
+This is my personal portfolio website — a space to share my journey as a Full-Stack Engineer in training.  
+It highlights my background, skills, and featured projects built through hands-on learning and curiosity.
 
-This site is part of my learning path toward becoming a **Full-Stack Engineer**.  
-It’s designed to share my growth, showcase projects, and highlight the connection between empathy and technology.
+## 🛠 Tech Stack
+- **HTML5**, **CSS3**
+- Responsive design with accessible, human-centered principles
+- Built for dark mode 🌑 (with light mode toggle)
+- Deployed on GitHub Pages
 
-The layout and styling are custom built with **HTML** and **CSS** — no frameworks — to focus on accessibility, clean code, and performance.
-
-> _Creating technology with empathy and impact._
-
----
-
-## 🧰 Tech Stack
-
-`HTML` • `CSS` • *(JavaScript to come later)*  
-
-Built with simplicity and care. 💛  
-
----
-
-## 🚀 Deployment
-
-Hosted with **GitHub Pages** — free, fast, and version-controlled.  
-Automatic updates when I commit new changes.
-
----
+## 🚀 Live Demo
+🔗 [malinfossum.github.io](https://malinfossum.github.io)
 
 ## 📬 Contact
+- 💌 [malinfossum.dev@proton.me](mailto:malinfossum.dev@proton.me)
+- 🐙 [GitHub Profile](https://github.com/malinfossum)
 
-**Malin Fossum**  
-📧 [malinfossum.dev@proton.me](mailto:malinfossum.dev@proton.me)  
-💻 [github.com/malinfossum](https://github.com/malinfossum)
-
----
-
-> ✨ _Tech with empathy. Code with purpose._
+> *“Tech with empathy. Code with purpose.”* ✨
