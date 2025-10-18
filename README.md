@@ -1,25 +1,70 @@
-# 🌙 Malin Fossum — Portfolio Website
+<!-- Banner -->
+<h1 align="center">✨ Malin Fossum — Portfolio Website ✨</h1>
 
-Creating technology with empathy and impact.  
-From social work to software — learning to build technology that helps people thrive.
+<p align="center">
+  <i>Creating technology with empathy and impact.</i><br>
+  From social work to software — learning to build technology that helps people thrive.
+</p>
 
-<img width="2542" height="1058" alt="Portfolio Preview" src="https://github.com/user-attachments/assets/24f33654-f871-4265-8194-c34f11831f9b"/>
+---
 
-## 🧠 About
-This is my personal portfolio website — a space to share my journey as a Full-Stack Engineer in training.  
-It highlights my background, skills, and featured projects built through hands-on learning and curiosity.
+### 🖥️ Preview
+<p align="center">
+  <img width="2542" height="1058" alt="Portfolio Preview" src="https://github.com/user-attachments/assets/dac21eb4-f526-4e9e-98ae-c506a09a3a3b"/>
+</p>
 
-## 🛠 Tech Stack
-- **HTML5**, **CSS3**
-- Responsive design with accessible, human-centered principles
-- Built for dark mode 🌑 (with light mode toggle)
-- Deployed on GitHub Pages
+---
 
-## 🚀 Live Demo
-🔗 [malinfossum.github.io](https://malinfossum.github.io)
+### 🧠 About
 
-## 📬 Contact
-- 💌 [malinfossum.dev@proton.me](mailto:malinfossum.dev@proton.me)
-- 🐙 [GitHub Profile](https://github.com/malinfossum)
+Hi there! 👋  
+I’m **Malin Fossum**, on my way to becoming a **Full-Stack Engineer** from 🇳🇴 **Norway**.  
+My journey started in **social work**, where I learned the importance of empathy, accessibility, and human-centered design.  
+Now, I’m blending those values with code to create digital solutions that make a real difference.
 
-> *“Tech with empathy. Code with purpose.”* ✨
+This site is my personal space — built from scratch, designed in dark mode, and crafted to grow with my learning journey.  
+
+> “Tech with empathy. Code with purpose.” 🌙
+
+---
+
+### 🛠️ Tech Stack
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=html,css,js,react,nodejs,express,python,github,vscode" alt="Tech Stack" />
+</p>
+
+- **HTML5**, **CSS3**, **JavaScript (ES6+)**
+- Responsive design and accessibility-first approach
+- Smooth dark/light theme toggle
+- Deployed with **GitHub Pages**
+
+---
+
+### 🌟 Featured Highlights
+
+| 💡 Project | 🔍 Description | 🔗 Links |
+|-------------|----------------|----------|
+| **Portfolio Website** | My personal site: clean, minimal, and accessible — built to grow with me. | [GitHub](https://github.com/malinfossum/portfolio-website) |
+| **Full-Stack Capstone** | A Codecademy project combining frontend + backend to build purposeful apps. | [GitHub](https://github.com/malinfossum/fullstack-capstone) |
+| **Python Experiments** | Exploring logic, data structures, and problem-solving through small projects. | [GitHub](https://github.com/malinfossum/python-mini-projects) |
+
+---
+
+### 🚀 Live Demo
+🌐 **[malinfossum.github.io](https://malinfossum.github.io)**
+
+---
+
+### 💌 Contact
+
+<p align="center">
+  <a href="mailto:malinfossum.dev@proton.me"><img src="https://img.shields.io/badge/Email%20Me-%F0%9F%93%A7-blue?style=for-the-badge" alt="Email"/></a>
+  <a href="https://github.com/malinfossum"><img src="https://img.shields.io/badge/GitHub-%23181717.svg?logo=github&logoColor=white&style=for-the-badge" alt="GitHub"/></a>
+</p>
+
+<p align="center">🌿 Built with empathy, curiosity, and a love for learning</p>
+
+---
+
+<sub><p align="center">© 2025 Malin Fossum — Creating technology with empathy and impact.</p></sub>
