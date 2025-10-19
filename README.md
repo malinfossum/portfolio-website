@@ -1,10 +1,5 @@
 <!-- Banner -->
-<h1 align="center">✨ Malin Fossum — Portfolio Website ✨</h1>
-
-<p align="center">
-  <i>Creating technology with empathy and impact.</i><br>
-  From social work to software — learning to build technology that helps people thrive.
-</p>
+![Banner](https://raw.githubusercontent.com/malinfossum/portfolio-website/main/MalinFossum_Banner_Web.png)
 
 ---
 
